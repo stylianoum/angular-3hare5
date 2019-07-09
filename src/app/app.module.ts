@@ -9,6 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertComponent } from './product-alert/product-alert.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartuiService } from './cartui.service';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,8 @@ import { CartuiService } from './cartui.service';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent },
+
     ])
   ],
   declarations: [
@@ -24,7 +27,8 @@ import { CartuiService } from './cartui.service';
     TopBarComponent,
     ProductListComponent,
     ProductAlertComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CartuiService]
